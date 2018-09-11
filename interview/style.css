@@ -1,0 +1,22 @@
+
+body {
+}
+
+h1 {
+   font-style: regular;
+   font-family: Avenir;
+   color: black;
+}
+
+
+#black-text{
+   color: green;
+}
+p {
+  font-size: 16px;
+  color: red;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: bold;
+  font-family: Avenir;
+}

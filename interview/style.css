@@ -1,22 +1,45 @@
-
 body {
+  background-image: url('Images/orig.jpg');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center top;
 }
+
 
 h1 {
    font-style: regular;
+   font-size: 150px;
+   font-weight: lighter;
+   font-style: normal;
+   font-weight: normal;
+   letter-spacing: normal;
+   font-family:Didot;
+   color:white;
+}
+
+h2 {
+   font-style: normal;
+   font-family: Didot;
+   font-size: 70px;
+   font-weight: 100;
+   letter-spacing: 3px;
+   line-height: 100px;
+   text-transform: none;
+   color: white;
+}
+
+h3 {
+   font-style: regular;
+   font-size: 20px;
+   font-weight: lighter;
+   font-family: -apple-system, sans-serif;;
+   color: #CFE6E6;
+}
+
+h4 {
+   font-style: regular;
+   font-size: 23px;
+   font-weight: lighter;
    font-family: Avenir;
-   color: black;
-}
-
-
-#black-text{
-   color: green;
-}
-p {
-  font-size: 16px;
-  color: red;
-  line-height: 1.2;
-  text-align: center;
-  font-weight: bold;
-  font-family: Avenir;
+   color: #CFE6E6;
 }

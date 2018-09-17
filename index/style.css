@@ -1,0 +1,44 @@
+body {
+  background-image: url('Images/moons.jpg');
+     background-attachment: fixed;
+     background-position: center top;
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-color: black;
+
+     height: 500px
+}
+
+h1 {
+   font-style: regular;
+   font-size: 50px;
+   font-weight: lighter;
+   font-style: normal;
+   font-weight: normal;
+   letter-spacing: normal;
+   font-family:Didot;
+   color:white;
+}
+
+h2 {
+   font-style: normal;
+   font-family: Didot;
+   font-size: 30px;
+   font-weight: 100;
+   letter-spacing: 3px;
+   line-height: 30px;
+   text-transform: none;
+   color: white;
+}
+
+
+li {
+   font-style: normal;
+   font-family: Didot;
+   font-size: 20px;
+   font-weight: 100;
+   letter-spacing: 3px;
+   line-height: 30px;
+   text-transform: none;
+   color: white;
+}

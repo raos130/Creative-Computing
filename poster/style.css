@@ -324,9 +324,10 @@ body{
 and (device-width: 414px)
 and (device-height:736px)
 and (-webkit-device-pixel-ratio: 3) {
+
   body {
     background-color: #F5E3E6;
-    border-radius: 1px;
+    border-radius: 10px;
     width: 400px;
     height: 700px;
   }

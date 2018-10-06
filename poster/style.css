@@ -2,8 +2,8 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(10, 10);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
   background-color: #F5E3E6;
   grid-auto-rows: minmax(1px, auto);
 
@@ -12,14 +12,20 @@
 .one {
 
   grid-row: 1;
-  background-color:#B46373;
+  background-color:#8D2E3D;
   width: 100px;
 	height: 100px;
   border-radius: 100px;
-  font-size: 20px;
-  font color: white;
-
 }
+
+.one1 {
+
+  grid-row: 1;
+  width: 100px;
+	height: 100px;
+  border-radius: 100px;
+}
+
 
 .three {
 
@@ -32,8 +38,7 @@
 
 .three1 {
 
-  grid-row: 3;
-  background-color:#690317;
+  grid-row: 3;;
   width:100px;
   height:100px;
   border-radius: 100px;
@@ -62,7 +67,7 @@
 
 .eight{
   grid-row: 4;
-  background-color:#B46373;
+  background-color:#8D2E3D;
   width:100px;
   height:100px;
     border-radius: 100px;
@@ -78,9 +83,26 @@
 
 }
 
+.nine1{
+
+  grid-row: 5;
+  width:100px;
+  height:100px;
+    border-radius: 100px;
+
+}
+
 .ten{
   grid-row: 6;
   background-color:#690317;
+  width:100px;
+  height:100px;
+    border-radius: 100px;
+
+}
+
+.ten1{
+  grid-row: 6;
   width:100px;
   height:100px;
     border-radius: 100px;
@@ -115,19 +137,24 @@
 	height: 100px;
 }
 
+.flip-container, .front2, .back2 {
+	width: 100px;
+	height: 100px;
+}
+
 .flip-container, .front3, .back3 {
 	width: 100px;
 	height: 100px;
 }
 
-.flip-container, .front4, .back {
+.flip-container, .front4, .back4 {
 	width: 100px;
 	height: 100px;
 }
 
 
 .flipper {
-	transition: 0.6s;
+	transition: 0.3s;
 	transform-style: preserve-3d;
 	position: relative;
 }
@@ -150,7 +177,7 @@
   height: 100px;
   width: 100px;
   font-size: 80px;
-  font-family: Avenir;
+  font-family: Italiana;
   line-height: normal;
   color: white;
   text-align: center;
@@ -158,6 +185,14 @@
 }
 
 .front1, .back1 {
+	backface-visibility: visible;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front2, .back2 {
 	backface-visibility: visible;
 
 	position: absolute;
@@ -173,31 +208,48 @@
   height: 100px;
   width: 100px;
   font-size: 80px;
-  font-family: Avenir;
+  font-family: Italiana;
   line-height: normal;
   color: white;
   text-align: center;
 }
 
 .front3, .back3 {
-	backface-visibility: visible;
+	backface-visibility: hidden;
 
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 
-.front3 {
+.front2 {
   z-index: 1;
 	transform: rotateY(0deg) translateZ(1px);
-  background-color:#B46373;
+  background-color:#690317;
   border-radius: 100px;
   height: 100px;
   width: 100px;
+  font-size: 80px;
+  font-family: Italiana;
+  color: white;
+  text-align: center;
 }
 
-.front4, .back {
-	backface-visibility: visible;
+.front3 {
+  z-index: 1;
+	transform: rotateY(0deg) translateZ(1px);
+  background-color:#690317;
+  border-radius: 100px;
+  height: 100px;
+  width: 100px;
+  font-size: 80px;
+  font-family: Italiana;
+  color: white;
+  text-align: center;
+}
+
+.front4, .back4 {
+	backface-visibility: hidden;
 
 	position: absolute;
 	top: 0;
@@ -207,42 +259,54 @@
 .front4 {
   z-index: 1;
 	transform: rotateY(0deg);
-  background-color:#7D2738;
+  background-color:#690317;
   border-radius: 100px;
   height: 100px;
   width: 100px;
+  font-size: 80px;
+  font-family: Italiana;
+  color: white;
+  text-align: center;
 }
 
 .back {
-	transform: rotateY(180deg)translateZ(1px);
+	transform: rotateY(180deg);
   position: absolute;
-
 
 }
 
 .back1 {
-	transform: rotateY(180deg)translateZ(1px);
+	transform: rotateY(180deg);
   position: absolute;
+}
 
-
+.back2 {
+	transform: rotateY(180deg);
+  position: absolute;
 }
 
 .back3 {
-	transform: rotateY(180deg);
+	transform: rotateY(180deg)translateZ(1px);
   position: absolute;
+  z-index: 1;
   font-size: 60px;
-  font-family: Baskerville;
-  width: 100%;
-  height: 100%;
-  line-height: 60px;
-  color: white;
+  font-family: Italiana;
+  color: #690317;
   text-align: center;
-  font-weight: bold;
-
 }
 
+.back4 {
+	transform: rotateY(180deg)translateZ(1px);
+  position: absolute;
+  z-index: 1;
+  width:90px;
+  height:80px;
+  align-items: center;
+}
+
+
 div{
-  animation: rotation 10s infinite linear;
+  animation: rotation 0s linear;
 }
 
 @keyframes rotation {

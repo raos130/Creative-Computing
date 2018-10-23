@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Timer Demo</title>
+      <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body style = "width: 100vw; height: 100vh;">
+    <section id="text"> Hello world </section>
+    <section id="clicks">0</section>
+
+
+<script>
+$("document") .ready(function(){
+// var second =0;
+var date= new Date(). getSeconds()
+console.log (date)
+
+
+setInterval( funtion(){
+  console.log(date);
+  date=date +1
+
+},1000);
+});
+
+</script>
+</body>
+</html>

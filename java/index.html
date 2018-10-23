@@ -2,12 +2,70 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>JQuery</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-Hello World
+
   </body>
+ <div id="random"> I've been clicked </div>
+
   <script>
+  //
+  // $("document").ready(function(){
+  //   var myDiv= $("#random");
+  //   var clicks =0;
+  //
+  //
+  //   $("#random").css({"color": "red"});
+  //   $("#random").click(function(){
+  //     $("#random").append(" " + clicks + " times");
+  //     clicks =clicks + 1
+  //   })
+  // })
+
+
+    $("document").ready(function(){
+      var myDiv= $("#random");
+      var index =0;
+      var words= ["wow", "yes", "cool"]
+
+
+      myDiv.click(function(){
+        if(index< words.length){
+     $("body").append("<div>" + words[index] + "</div>")
+
+      index++
+        }
+      })
+    })
+
+
+
+
+//
+//   var id;
+//   id= "hello";
+//   console.log (id);
+//
+//   id= 24;
+//   console.log(id);
+//
+//   var name="simran";
+//   var age= 24;
+//   var cost=1.23;
+//   var isAlive=true;
+//
+// if(age >21 && name == "simran"){
+//   console.log ("older than 21")
+// } else{
+//   console.log("younger than 21")
+// }
+
+
+
+// $("#random").append({"<h1> Hello Glove </h1>"});
+// $("#random").html("<h1>Hello Globe</h1>");
   // Turorial on boolean
 
 
@@ -28,65 +86,32 @@ Hello World
 
 
 
-var nameArray =[
-  "O hushed October morning mild",
-  "  Thy leaves have ripened to the fall",
-  "    Tomorrow’s wind, if it be wild",
-  "      Should waste them all",
-  "        The crows above the forest call",
-  "       Tomorrow they may form and go",
-  "      O hushed October morning mild",
-  "     Begin the hours of this day slow",
-  "    Make the day seem to us less brief",
-  "   Hearts not averse to being beguiled",
-  "    Beguile us in the way you know",
-  "     Release one leaf at break of day",
-  "       At noon release another leaf",
-  "         One from our trees, one far away",
-  "           Retard the sun with gentle mist",
-  "          Enchant the land with amethyst",
-"         Slow, slow",
-"       For the grapes’ sake, if they were all",
-"      Whose leaves already are burnt with frost",
-"     Whose clustered fruit must else be lost",
-"   For the grapes’ sake along the wall",
-]
-
-
-var agesArray = [
-  ",",
-  ";",
-  ",",
-  ".",
-  ";",
- ",",
-".",
-".",
-",",
-".",
-";",
-";",
-".",
-",",
-".",
-"!",
-",",
-",",
-"-",
-".",
-",",
-
-]
-
-// console.log(nameArray[0])
-// console.log(nameArray[1])
-// console.log(nameArray[2])
-// console.log(nameArray[3])
-// console.log(nameArray[4])
-
-for(var i= 0; i < nameArray.length; i ++){
-  console.log(nameArray[i] + agesArray[i]);
-}
+// var nameArray =[
+// "simran",
+// "callil",
+// "summer",
+// "sophie",
+// "elliot",
+// ]
+//
+//
+// var agesArray = [
+// 24,
+// 21,
+// 34,
+// 23,
+// 12,
+//
+// ]
+// // console.log(nameArray[0])
+// // console.log(nameArray[1])
+// // console.log(nameArray[2])
+// // console.log(nameArray[3])
+// // console.log(nameArray[4])
+//
+// for(var i= 0; i < nameArray.length; i ++){
+//   console.log(nameArray[i] + " is " + agesArray[i]);
+// }
 
 
 

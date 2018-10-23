@@ -3,68 +3,206 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+      <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-Hello World
-  </body>
-  <script>
 
-  var nameArray =[
-    "  October",
-    " O hushed October morning mild",
-    "  Thy leaves have ripened to the fall",
-    "    Tomorrow’s wind, if it be wild",
-    "      Should waste them all",
-    "        The crows above the forest call",
-    "       Tomorrow they may form and go",
-    "      O hushed October morning mild",
-    "     Begin the hours of this day slow",
-    "    Make the day seem to us less brief",
-    "   Hearts not averse to being beguiled",
-    "    Beguile us in the way you know",
-    "     Release one leaf at break of day",
-    "       At noon release another leaf",
-    "         One from our trees, one far away",
-    "           Retard the sun with gentle mist",
-    "          Enchant the land with amethyst",
-  "         Slow, slow",
-  "       For the grapes’ sake, if they were all",
-  "      Whose leaves already are burnt with frost",
-  "     Whose clustered fruit must else be lost",
-  "       For the grapes’ sake along the wall",
+
+<script>
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown(5000);
+    });
+    $("#stop").click(function(){
+        $("#panel").stop();
+    });
+});
+</script>
+
+<style>
+#panel, #flip {
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #E0F2F1;
+    color: #B0BEC5;
+    border: solid 1px #666;
+    border-radius: 3px;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+    word-wrap: normal;
+}
+</style>
+</head>
+<body>
+
+
+<div id="flip"><h1>October</h1></div>
+<div id="panel">By Robert Frost,<br>
+ O hushed October morning mild,<br>
+ Thy leaves have ripened to the fall,<br>
+  Tomorrow’s wind, if it be wild,<br>
+   Should waste them all,<br>
+  The crows above the forest call,<br>
+  Tomorrow they may form and go.<br>
+   O hushed October morning mild;<br>
+   Begin the hours of this day slow,<br>
+ Make the day seem to us less brief.<br>
+     Hearts not averse to being beguiled,<br>
+  Beguile us in the way you know,<br>
+      Release one leaf at break of day,<br>
+        At noon release another leaf,<br>
+         One from our trees, one far away,<br>
+     Retard the sun with gentle mist,<br>
+         Enchant the land with amethyst,<br>
+    Slow, slow,<br>
+    For the grapes’ sake, if they were all,<br>
+  Whose leaves already are burnt with frost,<br>
+    Whose clustered fruit must else be lost,<br>
+   For the grapes’ sake along the wall.<br></div>
+
+</body>
+</html>
+
+
+  <!-- <script>
+
+
+
+
+
+  $("document").ready(function(){
+    var myDiv= $("#random");
+    var index =0;
+    var words= ["By Robert Frost",
+     "O hushed October morning mild,",
+     "Thy leaves have ripened to the fall,",
+     " Tomorrow’s wind, if it be wild",
+      " Should waste them all,",
+      "The crows above the forest call,",
+      " Tomorrow they may form and go.",
+      "  O hushed October morning mild;",
+      " Begin the hours of this day slow,",
+      "    Make the day seem to us less brief.",
+       "   Hearts not averse to being beguiled,",
+       "    Beguile us in the way you know,",
+       "     Release one leaf at break of day,",
+       "       At noon release another leaf,",
+       "         One from our trees, one far away,",
+       "           Retard the sun with gentle mist,",
+       "          Enchant the land with amethyst,",
+     "         Slow, slow,",
+     "       For the grapes’ sake, if they were all,",
+     "      Whose leaves already are burnt with frost,",
+     "     Whose clustered fruit must else be lost,",
+     "       For the grapes’ sake along the wall.",
+
+
 
   ]
 
-  var agesArray = [
-    " by Robert Frost",
-    ",",
-    ";",
-    ",",
-    ".",
-    ";",
-   ",",
-  ".",
-  ".",
-  ",",
-  ".",
-  ";",
-  ";",
-  ".",
-  ",",
-  ".",
-  "!",
-  ",",
-  ",",
-  "-",
-  ".",
-  ",",
+    myDiv.click(function(){
+      if(index< words.length){
+   $("body").append("<div>" + words[index] + "</div>")
 
-  ]
+    index++
+      }
+    })
+  }) -->
 
-  for(var i= 0; i < nameArray.length; i ++){
-    console.log(nameArray[i] + agesArray[i])
-  }
+
+<!--
+  // transform : translate(0px);
+  // animation: slidein 3s linear 1s infinite a
+  //
+  //   @keyframes slidein {
+  //     from {transform: translate(0px); }
+  //   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //
+  // var nameArray =[
+  //   "  October",
+  //   " O hushed October morning mild ",
+  //   "  Thy leaves have ripened to the fall",
+  //   "    Tomorrow’s wind, if it be wild",
+  //   "      Should waste them all",
+  //   "        The crows above the forest call",
+  //   "       Tomorrow they may form and go",
+  //   "      O hushed October morning mild",
+  //   "     Begin the hours of this day slow",
+  //   "    Make the day seem to us less brief",
+  //   "   Hearts not averse to being beguiled",
+  //   "    Beguile us in the way you know",
+  //   "     Release one leaf at break of day",
+  //   "       At noon release another leaf",
+  //   "         One from our trees, one far away",
+  //   "           Retard the sun with gentle mist",
+  //   "          Enchant the land with amethyst",
+  // "         Slow, slow",
+  // "       For the grapes’ sake, if they were all",
+  // "      Whose leaves already are burnt with frost",
+  // "     Whose clustered fruit must else be lost",
+  // "       For the grapes’ sake along the wall",
+  //
+  // ]
+  //
+  // var agesArray = [
+  //   " by Robert Frost",
+  //   ",",
+  //   ";",
+  //   ",",
+  //   ".",
+  //   ";",
+  //   ",",
+  //   ".",
+  // ".",
+  // ",",
+  // ".",
+  // ";",
+  // ";",
+  // ".",
+  // ",",
+  // ".",
+  // "!",
+  // ",",
+  // ",",
+  // "-",
+  // ".",
+  // ",",
+  //
+  // ]
+document.body.style.backgroundColor = "lightblue";
+
+  // for(var i= 0; i < nameArray.length; i ++){
+  //   console.log(nameArray[i] + agesArray[i])
+  // }
 
 
     </script>
-  </html>
+  </html> -->

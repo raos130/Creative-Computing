@@ -1,8 +1,48 @@
-.script{
+
+$hoursOuterColor: pink;
+$minutesOuterColor:red;
+$secondsOuterColor: blue;
+$hoursInnerColor: green;
+$minutesInnerColor: orange;
+$secondsInnerColor: yellow;
 
 
-  font-size: 80px;
-  font-family: Didot;
-  color: white;
-  text-align: center;
+body{
+background-color: black;
+}
+
+.time{
+  height: 350px;
+  width: 350px;
+  position: fixed;
+  margin:auto;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0
+  border: 1px solid red;
+  ul{
+    list-style-type: none;
+    padding:0;
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    border-radius: 500px;
+    li{
+      position: absolute;
+      height: 50%;
+      width: 20px;
+     transform-origin: bottom;
+     left:0;
+     right:0;
+     top:0;
+     bottom:0;
+
+     font-size: 1.2rem;
+     line-height: 40px;
+    }
+  }
 }

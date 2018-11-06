@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Animated Clock</title>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+<body>
+
+<span class="clock"></span>
+<div id="clock1"> </div>
+<span class="clock1"></span>
+<div id="clock2"> </div>
+<span class="clock2"></span>
+<div id="clock3"> </div>
+<span class="clock3"></span>
+<div id="clock4"> </div>
+<span class="clock4"></span>
+<div id="clock5"> </div>
+<span class="clock5"></span>
+<div id="clock6"> </div>
+<span class="clock6"></span>
+<div id="clock7"> </div>
+<span class="clock7"></span>
+<div id="clock8"> </div>
+<span class="clock8"></span>
+<div id="clock9"> </div>
+<span class="clock9"></span>
+<div id="clock10"> </div>
+<span class="clock10"></span>
+<div id="clock11"> </div>
+<span class="clock11"></span>
+<div id="clock12"> </div>
+<span class="clock12"></span>
+<div id="clock13"> </div>
+<span class="clock13"></span>
+<div id="clock14"> </div>
+<span class="clock14"></span>
+<div id="clock15"> </div>
+<span class="clock15"></span>
+<div id="clock16"> </div>
+<span class="clock16"></span>
+<div id="clock17"> </div>
+<span class="clock17"></span>
+<div id="clock18"> </div>
+<span class="clock18"></span>
+<div id="clock19"> </div>
+<span class="clock19"></span>
+<div id="clock20"> </div>
+<span class="clock20"></span>
+<div id="clock21"> </div>
+<span class="clock21"></span>
+<div id="clock22"> </div>
+<span class="clock22"></span>
+<div id="clock23"> </div>
+<span class="clock23"></span>
+
+
+
+
+</body>
+<script type="text/javascript">
+
+jQuery(function($) {
+  setInterval(function() {
+    var date = new Date(),
+        time = date.toLocaleTimeString();
+    $(".clock, .clock1, .clock2, .clock3, .clock4, .clock5, .clock6, .clock7, .clock8, .clock9, .clock10, .clock11, .clock12, .clock13, .clock14, .clock15, .clock16, .clock17, .clock18, .clock19, .clock20, .clock21, .clock22, .clock23").html(time);
+  }, 1000);
+});
+
+
+
+</script>
+</html>
+
+<style type="text/css">
+body{
+	background-color: black;
+	overflow: hidden;
+	margin: 0;
+    padding: 0;
+    width: 70%;
+}
+
+.clock{
+
+	position: relative;
+	width: 630px;
+	height: 630px;
+	margin: :400px auto 0 auto;
+top: 200px;
+left: 200px;
+font-size: 100px;
+	background-color:red;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock1{
+
+	position: relative;
+	transform: rotateY(90deg);
+	width: 630px;
+	height: 630px;
+	z-index: 2;
+	margin: :400px auto 0 auto;
+top: 0px;
+left: 0px;
+font-size: 100px;
+	background-color:#EEC300;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock2{
+
+	position: relative;
+	transform: rotateY(90deg);
+	width: 630px;
+	height: 630px;
+	z-index: 2;
+top: 0px;
+left: 40px;
+font-size: 100px;
+	background-color:orange;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock3{
+	position: relative;
+	width: 630px;
+	height: 630px;
+	z-index: 3;
+top: -30px;
+left: 120px;
+font-size: 100px;
+	background-color:red;
+	opacity: 0.3;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+	-ms-transform: rotate(20deg); /* IE 9 */
+     -webkit-transform: rotate(20deg); /* Safari 3-8 */
+     transform: rotate(20deg);
+}
+
+.clock4{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 0;
+top: -120px;
+left: 400px;
+font-size: 100px;
+	background-color:yellow;
+	opacity: 0.8;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock5{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 0;
+top: -160px;
+left: 100px;
+font-size: 100px;
+	background-color:orange;
+	opacity: 0.4;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock6{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 1;
+top: -800px;
+left: 400px;
+font-size: 100px;
+	background-color:#FE621D;
+	opacity: 0.8;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+.clock7{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 0;
+top: -860px;
+left: -30px;
+font-size: 100px;
+	background-color:#FA5726;
+	opacity: 0.4;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock8{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 2;
+top:-600px;
+left: 707px;
+font-size: 100px;
+	background-color:#F77C00;
+	opacity: 0.8;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock9{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 0;
+top: -900px;
+left: 650px;
+font-size: 100px;
+	background-color:#FC401B;
+	opacity: 0.8;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+
+.clock10{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 0;
+top: -780px;
+left: 590px;
+font-size: 100px;
+	background-color:#FE621D;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock11{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 0;
+top: -80px;
+left: 590px;
+font-size: 100px;
+	background-color:#F72900;
+	opacity: 0.9;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+
+.clock12{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 0;
+top: 800px;
+left: 50px;
+font-size: 100px;
+	background-color:#F72900;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+
+.clock13{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 2;
+top: -1650px;
+left: 560px;
+font-size: 100px;
+	background-color:#F99C3F;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+
+.clock14{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 0;
+top: -1680px;
+left: 700px;
+font-size: 100px;
+	background-color:#FAF711;
+	opacity: 0.4;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+
+.clock15{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: -1;
+top: -1440px;
+left: -10px;
+font-size: 100px;
+	background-color:#FA1111;
+	opacity: 0.9;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock16{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 0;
+top: -1680px;
+left: -70px;
+font-size: 100px;
+	background-color:#EE8200;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+
+.clock17{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 0;
+top: -1680px;
+left: 870px;
+font-size: 100px;
+	background-color:#F91616;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock18{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 0;
+top: -1980px;
+left: 700px;
+font-size: 100px;
+	background-color:#F92E16;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+
+.clock19{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 0;
+top: -2399px;
+left: 900px;
+font-size: 100px;
+	background-color:#FEDB3F;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock20{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 0;
+top: -2650px;
+left: 900px;
+font-size: 100px;
+	background-color:#F92E16;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock21{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: -3;
+top: -2450px;
+left: 1000px;
+font-size: 100px;
+	background-color:#F9D716;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock22{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: -3;
+top: -2450px;
+left: 1000px;
+font-size: 100px;
+	background-color:#F9D716;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}
+
+.clock23{
+	position: relative;
+	transform: rotateY(270deg);
+	width: 630px;
+	height: 630px;
+	z-index: 2;
+top: -2850px;
+left: 1000px;
+font-size: 100px;
+	background-color:#F98116;
+	opacity: 0.6;
+	font-family: Futura;
+	border-radius: 500px;
+	list-style: none;
+}

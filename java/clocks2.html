@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Seconds Clock</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <style type="text/css">
+        * {
+          margin: 0;
+          padding: 100;
+          background-color: black;
+        }
+
+        #clock {
+          position: relative;
+          width: 630px;
+          height: 630px;
+          margin: :400px auto 0 auto;
+        top: 200px;
+        left: 200px;
+
+          background-color:black;
+          border-radius: 500px;
+          list-style: none;
+          }
+
+        #sec {
+          position: absolute;
+           z-index: 4;
+           top: 27px;
+           left: 120px;
+           width: 300px;
+           height: 300px;
+
+
+           box-shadow: 0 0 2px rgba(0,0,0,.2);
+           border-radius: 500px;
+           transform-origin: 1px 110px;
+           opacity: 0.8;
+           transition: .5s;
+           -webkit-animation: rotate-second 60s linear infinite;
+           -moz-animation: rotate-second 60s linear infinite;
+          }
+
+          #min{
+            position: absolute;
+            z-index: 3;
+            top: 60px;
+            left: 128px;
+            width: 200px;
+            height: 200px;
+            border-radius: 500px;
+            opacity: 0.8;
+            box-shadow: 0 0 2px rgba(0,0,0,.2);
+            transform-origin: 2px 70px;
+            transition: .5s;
+            -webkit-animation: rotate-minute 3600s linear infinite;
+            -moz-animation: rotate-minute 3600s linear infinite;
+
+
+          }
+
+          #hour{
+            position: absolute;
+            z-index: 2;
+            top: 80px;
+            left: 128px;
+            width: 250px;
+            height: 250px;
+            background-color: #555;
+            border-radius: 500px;
+            box-shadow: 0 0 2px rgba(0,0,0,.2);
+            transform-origin: 2px 50px;
+            opacity: 0.6;
+
+            transition: .5s;
+            -webkit-animation: rotate-hour 43200s linear infinite;
+            -moz-animation: rotate-hour 43200s linear infinite;
+          }
+
+        #sec {
+          background-color: blue;
+          z-index: 3;
+            }
+
+        #min {
+          background-color:#D6D6FA;
+          z-index: 1;
+            }
+
+        #hour {
+          background-color: #D6F8FA;
+          z-index: 2;
+            }
+            p {
+                text-align: center;
+                padding: 1px 0 0 0;
+                }
+
+        </style>
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+
+                  setInterval( function() {
+                  var seconds = new Date().getSeconds();
+                  var sdegree = seconds * 6;
+                  var srotate = "rotate(" + sdegree + "deg)";
+
+                  $("#sec").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
+
+                  }, 1000 );
+
+
+                  setInterval( function() {
+                  var hours = new Date().getHours();
+                  var mins = new Date().getMinutes();
+                  var hdegree = hours * 30 + (mins / 2);
+                  var hrotate = "rotate(" + hdegree + "deg)";
+
+                  $("#hour").css({"-moz-transform" : hrotate, "-webkit-transform" : hrotate});
+
+                  }, 1000 );
+
+
+                  setInterval( function() {
+                  var mins = new Date().getMinutes();
+                  var mdegree = mins * 6;
+                  var mrotate = "rotate(" + mdegree + "deg)";
+
+                  $("#min").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});
+
+                  }, 1000 );
+
+            });
+
+
+        </script>
+</head>
+<body>
+
+  <ul id="clock">
+      <li id="sec"></li>
+      <li id="hour"></li>
+    <li id="min"></li>
+  </ul>
+
+</style>
+</body>
+</html>
+
+<style type="text/css">
+
+#sec{
+  width: 100px;
+  height: 100px;
+  background-color: #D6D6FA;
+ border-radius: 300px; */
+   margin-top: 150px; */
+  position: static;
+  transition: all .4s ease;
+  color: #D6F8FA;
+  text-align: center;
+  font-size:70px;
+  font-family: Futura;
+}
+#mins{
+  width: 200px;
+  height: 200px;
+  background-color: black;
+left: 440px;
+top: -448px;
+border-radius: 300px;
+  position: relative;
+  transition: all .4s ease;
+  color:#E9ECFF;
+  text-align: center;
+  font-size:240px;
+  font-family: Futura;
+
+  transform-origin: 2px 50px;
+  opacity: 0.9;
+  transition: .5s;
+  -webkit-animation: rotate-minute 3600s linear infinite;
+  -moz-animation: rotate-minute 3600s linear infinite;
+}
+#hrs{
+  width: 200px;
+  height: 200px;
+  background-color:black;
+ border-radius: 300px;
+  top: -645px;
+  left: 139px;
+  position: relative;
+  transition: all .4s ease;
+  color: #E9ECFF;
+  text-align: center;
+  font-size: 240px;
+  font-family: Futura;
+
+  transform-origin: 2px 50px;
+  opacity: 0.9;
+
+  transition: .5s;
+  -webkit-animation: rotate-hour 43200s linear infinite;
+  -moz-animation: rotate-hour 43200s linear infinite;
+}
+
+</style>
+</head>
+
+  <body>
+
+    <section id="mins"></section>
+    <section id="hrs"></section>
+  </body>
+  <script>
+  $(function() {
+      setInterval( function() {
+        var color = 0;
+        var seconds = new Date().getSeconds();
+        $("#sec").html(seconds);
+      }, 1000 );
+  });
+
+  $(function() {
+      setInterval( function() {
+        var color = 0;
+        var minutes = new Date().getMinutes();
+        $("#mins").html(minutes);
+      }, 1000 );
+  });
+
+  $(function() {
+      setInterval( function() {
+        var color = 0;
+        var hours = new Date().getHours();
+        $("#hrs").html(hours);
+      }, 1000 );
+  });
+
+  </script>
+
+</html>

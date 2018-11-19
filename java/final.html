@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+    <form id="form" >
+      <input id="input1" type="text" name="hi" value= "" placeholder="Say Hello">
+      <!-- <input id="input2" type="text" name="hey" value= "" placeholder="Add your name"> -->
+      <input type="submit" name="" value="go">
+
+
+<!-- <input type="text" name="hi" value= "" placeholder="Say Hello">
+<input type="text" name="hey" value= "" placeholder="Add your name">
+<input type="submit" name="" value="go"> -->
+    </form>
+
+    <div id="inputs">
+    </div>
+
+<script type="text/javascript">
+$("#form").submit(function(event){
+  // console.log($("#input1").val())
+  var userInput = $("#input1").val()
+  if (userInput="hello"){
+  $("#inputs").prepend("<div> Hey There! </div>")
+}
+  // console.log($("#input2").val())
+  event.preventDefault();
+});
+
+
+</script>
+  </body>
+</html>

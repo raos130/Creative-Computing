@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>lines</title>
+        <link href='https://fonts.googleapis.com/css?family=Geo' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style media="screen">
+
+    img {
+       width: 1000px;
+       animation-timing-function:linear;
+       animation: mymove 3s infinite alternate;
+       height: 6px;
+       float: left;
+
+   }
+   .saturate {-webkit-filter: saturate(10); filter: saturate(10);}
+   @keyframes
+   mymove {
+     0%   {top: 0px;width: 300px;transform: translateX(2000px)}
+     100% {top: 0px; width: 700px;}
+   }
+
+
+     img{
+     animation-timing-function:linear;
+     animation: mymove2 3s infinite alternate;
+     height: 12px;
+     width: 1000px;
+     float: right;
+     }
+      .saturate {-webkit-filter: saturate(5); filter: saturate(5);}
+     @keyframes mymove2 {
+       0%   {top: 0px; width: 500px;transform: translateX(400px)}
+       100% {top: 0px; width: 1000px;}
+     }
+
+
+      #img3{
+      animation-timing-function:linear;
+      animation: mymove3 3s infinite alternate;
+      height: 4px;
+      width: 800px;
+      }
+      @keyframes mymove3 {
+       0%   {top: 0px; background: #FFFF00; width: 400px;transform: translateX(-400px)}
+       100% {top: 0px; background:#FC471E; width: 800px;}
+      }
+
+
+     div{
+       animation-direction: alternate;
+     }
+
+     form{
+
+       display: flex;
+       flex-direction: row;
+       align-items: left;
+       justify-content: left;
+
+       transform: rotateY(0deg);
+     }
+
+     input{
+       border: none;
+       font-size: 40px;
+       color: red;
+
+       font-family: Geo;
+       background-color: rgba(255,255,255,0);
+     }
+
+    </style>
+  </head>
+
+
+  <body>
+    <form id="target">
+    <input id="city" type="text" placeholder="Your city" value="New York">
+    </form>
+
+    <div id="windline"> </div>
+<img class="saturate" src="images/IWSL.gif" alt="windline" width="1000" height="6">
+<img class="saturate" src="images/IWSL.gif" alt="windline1" width="1200" height="6">
+<img class="saturate" src="images/IWSL.gif" alt="windline2" width="900" height="6">
+
+
+
+
+    <script type="text/javascript">
+
+    function handleData(data){
+      console.log(data);
+      console.log(data.name);
+      console.log(data.main.temp);
+      console.log(data.wind.speed);
+
+
+      $("#tempText").html( data.main.temp + "° C ")
+      $("#speedText").html(data.main.speed )
+      $("#tempCircle").css("width", data.main.temp)
+      $("#tempCircle").css("height",data.main.temp)
+
+      $("#speedText1").html( data.wind.speed)
+      $("#tempSpeed").css("width", data.wind.speed)
+      $("#tempSpeed").css("height",data.wind.speed)
+
+      $(".windline").css("animation-duration", data.wind.speed*(.4) + "s" )
+      $(".windline1").css("animation-duration", data.wind.speed*(.4) + "s" )
+      $(".windline2").css("animation-duration", data.wind.speed*(.4) + "s" )
+
+
+
+      var city = "New York"
+      getData(city)
+
+      $( "#target" ).submit(function( event ) {
+      city = $("#city").val()
+      getData(city)
+      $( "#target" ).val("In" + city)
+      event.preventDefault();
+      });
+      }
+
+
+</script>
+  </body>
+</html>

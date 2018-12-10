@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Winspeed</title>
+        <link href='https://fonts.googleapis.com/css?family=Geo' rel='stylesheet'>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+       <form id="target">
+       <input id="city" type="text" placeholder="Your city" value="New York">
+       </form>
+       <style media="screen">
+
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    box-sizing: border-box;
+    margin: 0px;
+    color: white;
+    /* overflow: hidden; */
+  }
+
+  div{
+    animation-direction: alternate-reverse;
+  }
+
+  form{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+
+    transform: rotateY(0deg);
+  }
+
+  form:hover{
+    -webkit-transform: scale(1.9);
+          -ms-transform: scale(2.0);
+          transform: scale(2.0);
+  }
+
+  input{
+    border: none;
+    font-size: 30px;
+    color: #E8E9E9;
+    opacity: 0.5px;
+    font-family: Geo;
+    align-items: left;
+    background-color: rgba(255,255,255,0);
+  }
+
+
+  #tempText{
+  font-family: Avenir;
+  font-size: 60px;
+  color: red;
+  }
+
+  .windclass{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .windclass > div{
+    border-radius: 100px;
+    filter: invert(9);
+
+  }
+
+  /* #circle{
+  width: 50px;
+  height:3000px;
+  opacity: 0.3;
+  background-color: red;
+  z-index: 4;
+  top:84px;
+
+  position: relative;
+  } */
+
+  #windline1{
+  animation-timing-function:linear;
+  animation: mymove 3s infinite alternate;
+  height: 2px;
+  width: 700px;
+  left: 10px;
+  filter: hue-rotate(80deg);
+  animation-delay: 1s;
+  /* animation-duration: 10s;  */
+}
+  @keyframes
+  mymove {
+    0%   {top: 0px; background: #FFFF00; width: 300px;transform: translateX(2000px)}
+    100% {top: 0px; background: #FE3333; width: 700px;}
+  }
+
+
+  #windline2{
+  animation-timing-function:linear;
+  animation: mymove2 3s infinite alternate;
+  height: 3px;
+  background-color: black;
+  width: 1000px;
+
+  }
+  @keyframes mymove2 {
+    0%   {top: 0px; background: #FFFF00; width: 600px;transform: translateX(1300px);}
+    100% {top: 0px; background:#FE3333; width: 1000px;}
+  }
+
+
+   #windline3{
+   animation-timing-function:linear;
+   animation: mymove3 3s infinite alternate;
+   height: 4px;
+   background-color: black;
+   width: 800px;
+
+
+   }
+   @keyframes mymove3 {
+    0%   {top: 0px; background: #FFFF00; width: 400px;transform: translateX(-400px)}
+    100% {top: 0px; background:#FC471E; width: 800px;}
+   }
+
+   #windline4{
+   animation-timing-function:linear;
+   animation: mymove4 3s infinite alternate;
+   height: 3px;
+   width: 600px;
+   filter: hue-rotate(110deg);
+   animation-delay: 1s;
+    }
+   @keyframes mymove4 {
+    0%   {top: 0px; background: #FFFF00; width: 300px;transform: translateX(400px)}
+    100% {top: 0px; background:#FF7812; width: 600px;}
+    }
+
+    #windline5{
+    animation-timing-function:linear;
+    animation: mymove5 3s infinite alternate;
+    height: 2px;
+    width: 900px;
+    filter: hue-rotate(90deg);
+    animation-delay: 2s;
+    }
+    @keyframes mymove5 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(-900px)}
+      100% {top: 0px; background:#FC471E; width: 900px;}
+    }
+
+    #windline6{
+    animation-timing-function:linear;
+    animation: mymove6 3s infinite alternate;
+    height: 4px;
+    background-color: black;
+    width: 900px;
+
+
+
+    }
+    @keyframes mymove6 {
+      0%   {top: 0px; background: #FFFF00; width: 300px;transform: translateX(-500px);}
+      100% {top: 200px; background:#FF7E00; width: 900px;}
+    }
+
+    #windline7{
+    animation-timing-function:linear;
+    animation: mymove7 3s infinite alternate;
+    height: 4px;
+    background-color: black;
+    width: 700px;
+    filter: hue-rotate(80deg);
+
+    }
+    @keyframes mymove7 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(700px);}
+      100% {top: 0px; background:#FF7812; width: 700px;}
+    }
+
+    #windline8{
+    animation-timing-function:linear;
+    animation: mymove8 3s infinite alternate;
+    height: 3px;
+    background-color: black;
+    width: 800px;
+    filter: hue-rotate(90deg);
+    animation-delay: 1s;
+
+    }
+    @keyframes mymove8 {
+      0%   {top: 0px; background: #FFFF00; width: 400px;transform: translateX(-500px);}
+      100% {top: 0px; background:#FC471E; width: 800px;}
+    }
+
+    #windline9{
+    animation-timing-function:linear;
+    animation: mymove9 3s infinite alternate;
+    height: 2px;
+    background-color: black;
+    width: 500px;
+filter: hue-rotate(100deg);
+    }
+    @keyframes mymove9 {
+      0%   {top: 0px; background: #FFFF00; width: 20px;transform: translateX(500px);}
+      100% {top: 0px; background:#FF7812; width: 500px;}
+    }
+
+    #windline10{
+    animation-timing-function:linear;
+    animation: mymove10 3s infinite alternate;
+    height: 4px;
+    background-color: black;
+    width: 1100px;
+
+    }
+    @keyframes mymove10 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(700px);}
+      100% {top: 0px; background:#FF7812; width: 1100px;}
+    }
+
+    #windline11{
+    animation-timing-function:linear;
+    animation: mymove11 3s infinite alternate;
+    height: 2px;
+    background-color: black;
+    width: 700px;
+    filter: hue-rotate(90deg);
+
+    }
+    @keyframes mymove11 {
+      0%   {top: 0px; background: #FFFF00; width: 400px;transform: translateX(-700px);}
+      100% {top: 0px; background:#FC471E; width: 700px;}
+    }
+
+    #windline12{
+    animation-timing-function:linear;
+    animation: mymove12 3s infinite alternate;
+    height: 4px;
+    background-color: black;
+    width: 500px;
+    left:200px;
+    top:200px;
+    filter: hue-rotate(90deg);
+    }
+    @keyframes mymove12 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(900px);}
+      100% {top: 0px; background:#FF7812; width: 500px;}
+    }
+
+    #windline13{
+    animation-timing-function:linear;
+    animation: mymove13 3s infinite alternate;
+    height: 3px;
+    background-color: black;
+    width: 900px;
+    left:300px;
+
+    }
+    @keyframes mymove13 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(-100px);}
+      100% {top: 0px; background:#FF7812; width: 900px;}
+    }
+
+    #windline14{
+    animation-timing-function:linear;
+    animation: mymove14 3s infinite alternate;
+    height: 2px;
+    background-color: black;
+    width: 600px;
+    left:800px;
+    top:800px;
+    filter: hue-rotate(100deg);
+    animation-delay: 2s;
+    }
+    @keyframes mymove14 {
+      0%   {top: 0px; background: #FFFF00; width: 300px;transform: translateX(-200px);}
+      100% {top: 0px; background:#FC471E; width: 600px;}
+    }
+
+    #windline15{
+    animation-timing-function:linear;
+    animation: mymove15 3s infinite alternate;
+    height: 2px;
+    background-color: black;
+    width: 1100px;
+    left:200px;
+    top:200px;
+    }
+    @keyframes mymove15 {
+      0%   {top: 0px; background: #FFFF00; width: 800px;transform: translateX(-600px);}
+      100% {top: 0px; background:#FF7812; width: 1100px;}
+    }
+
+
+    #windline16{
+    animation-timing-function:linear;
+    animation: mymove16 3s infinite alternate;
+    height: 3px;
+    width: 200px;
+    border-radius: 400px;
+    background-color: black;
+    left:200px;
+    top:200px;
+    filter: hue-rotate(90deg);
+    }
+    @keyframes mymove16 {
+      0%   {top: 0px; background: #FFFF00; width: 400px;transform: translateX(500px);}
+      100% {top: 0px; background:#FF7812; width: 800px;}
+    }
+
+    #windline17{
+    animation-timing-function:linear;
+    animation: mymove17 3s infinite alternate;
+    height: 4px;
+    background-color: black;
+    width: 500px;
+    left:200px;
+    top:200px;
+    }
+    @keyframes mymove17 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(200px);}
+      100% {top: 0px; background:#FC471E; width: 500px;}
+    }
+
+    #windline18{
+    animation-timing-function:linear;
+    animation: mymove18 3s infinite alternate ;
+    height: 2px;
+    background-color: black;
+    width: 1000px;
+    left:200px;
+    top:200px;
+    }
+    @keyframes mymove18 {
+      0%   {top: 0px; background: #FFFF00; width: 400px;transform: translateX(700px);}
+      100% {top: 0px; background:#FF7812; width: 1000px;}
+    }
+
+    #windline19{
+    animation-timing-function:linear;
+    animation: mymove19 3s infinite alternate;
+    height: 3px;
+    background-color: black;
+    width: 900px;
+    left:200px;
+    top:200px;
+    filter: hue-rotate(90deg);
+    }
+    @keyframes mymove19 {
+      0%   {top: 0px; background: #FFFF00; width: 400px;transform: translateX(-500px);}
+      100% {top: 0px; background:#FF7812; width: 900px;}
+    }
+
+    #windline20{
+    animation-timing-function:linear;
+    animation: mymove20 3s infinite alternate;
+    height: 2px;
+    background-color: black;
+    width: 500px;
+    left:200px;
+    top:200px;
+    }
+    @keyframes mymove20 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(-300px);}
+      100% {top: 0px; background:#FC471E; width: 500px;}
+    }
+
+    #windline21{
+    animation-timing-function:linear;
+    animation: mymove21 3s infinite alternate;
+    height: 4px;
+    background-color: black;
+    width: 900px;
+    left:200px;
+    top:200px;
+    }
+    @keyframes mymove21 {
+      0%   {top: 0px; background: #FFFF00; width: 400px;transform: translateX(-900px);}
+      100% {top: 0px; background:#FF7812; width: 900px;}
+    }
+
+    #windline22{
+    animation-timing-function:linear;
+    animation: mymove22 3s infinite alternate;
+    height: 2px;
+    background-color: black;
+    width: 700px;
+    left:200px;
+    top:200px;
+
+    }
+    @keyframes mymove22 {
+      0%   {top: 0px; background: #FFFF00; width: 300px;transform: translateX(700px);}
+      100% {top: 0px; background:#FF7812; width: 700px;}
+    }
+
+    #windline23{
+    animation-timing-function:linear;
+    animation: mymove23 3s infinite alternate;
+    height: 2px;
+    background-color: black;
+    width: 400px;
+    left:200px;
+    top:200px;
+    }
+    @keyframes mymove23 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(-1000px);}
+      100% {top: 0px; background:#FC471E; width: 400px;}
+    }
+
+    #windline24{
+    animation-timing-function:linear;
+    animation: mymove24 3s infinite alternate;
+    height: 4px;
+    background-color: black;
+    width: 500px;
+    left:200px;
+    top:200px;
+    }
+    @keyframes mymove24 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(300px);}
+      100% {top: 0px; background:#FF7812; width: 500px;}
+    }
+
+    #windline25{
+    animation-timing-function:linear;
+    animation: mymove25 3s infinite alternate;
+    height: 3px;
+    background-color: black;
+    width: 700px;
+    left:200px;
+    top:200px;
+    }
+    @keyframes mymove25 {
+      0%   {top: 0px; background: #FFFF00; width: 300px;transform: translateX(700px);}
+      100% {top: 0px; background:#FF7812; width: 700px;}
+    }
+
+    #windline26{
+    animation-timing-function: linear;
+    animation: mymove20 3s infinite alternate;
+    height: 2px;
+    background-color: black;
+    width: 500px;
+    left:900px;
+    top:200px;
+    filter: hue-rotate(80deg);
+    animation-delay: 1s;
+    }
+    @keyframes mymove20 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(-700px);}
+      100% {top: 0px; background:#FC471E; width: 500px;}
+    }
+
+    #windline27{
+    animation-timing-function: linear;
+    animation: mymove27 3s infinite alternate;
+    height: 4px;
+    background-color: black;
+    width: 500px;
+    left:900px;
+    top:200px;
+    filter: hue-rotate(100deg)
+    }
+    @keyframes mymove27 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(700px);}
+      100% {top: 0px; background:#FF7812; width: 500px;}
+    }
+
+    #windline28{
+    animation-timing-function: linear;
+    animation: mymove28 3s infinite alternate;
+    height: 4px;
+    background-color: black;
+    width: 900px;
+    left:900px;
+    top:200px;
+
+    }
+    @keyframes mymove28 {
+      0%   {top: 0px; background: #FFFF00; width: 400px;transform: translateX(-900px);}
+      100% {top: 0px; background:#FF7812; width: 900px;}
+    }
+
+    #windline29{
+    animation-timing-function: linear;
+    animation: mymove29 3s infinite alternate;
+    height: 2px;
+    background-color: black;
+    width: 300px;
+    left:900px;
+    top:200px;
+    filter: hue-rotate(130deg);
+    animation-delay: 2s;
+    }
+    @keyframes mymove29 {
+      0%   {top: 0px; background:#FFFF00; width: 100px;transform: translateX(-300px);}
+      100% {top: 0px; background:#FC471E; width: 300px;}
+    }
+
+    #windline30{
+    animation-timing-function: linear;
+    animation: mymove30 3s infinite alternate;
+    height: 2px;
+    background-color: black;
+    width: 900px;
+    left:900px;
+    top:200px;
+    }
+    @keyframes mymove30 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(700px);}
+      100% {top: 0px; background:#FF7812; width: 900px;}
+    }
+
+    #windline31{
+    animation-timing-function: linear;
+    animation: mymove31 3s infinite alternate;
+    height: 3px;
+    background-color: black;
+    width: 900px;
+    left:900px;
+    top:200px;
+    }
+    @keyframes mymove31 {
+      0%   {top: 0px; background: #FFFF00; width: 400px;transform: translateX(-1000px);}
+      100% {top: 0px; background:#FF7812; width: 900px;}
+    }
+
+    #windline32{
+    animation-timing-function: linear;
+    animation: mymove32 3s infinite alternate;
+    height: 4px;
+    background-color: black;
+    width: 700px;
+    left:900px;
+    top:200px;
+    }
+    @keyframes mymove32 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(1200px);}
+      100% {top: 0px; background:#FC471E; width: 700px;}
+    }
+
+    #windline33{
+    animation-timing-function: linear;
+    animation: mymove33 3s infinite alternate;
+    height: 2px;
+    background-color: black;
+    width: 900px;
+    left:900px;
+    top:200px;
+    filter: hue-rotate(80deg);
+    animation-delay: 1s;
+    }
+    @keyframes mymove33 {
+      0%   {top: 0px; background: #FFFF00; width: 200px;transform: translateX(-300px);}
+      100% {top: 0px; background:#FF7812; width: 900px;}
+    }
+
+    #windline34{
+    animation-timing-function: linear;
+    animation: mymove34 3s infinite alternate;
+    height: 4px;
+    background-color: black;
+    width: 300px;
+    left:100px;
+    top:200px;
+    }
+    @keyframes mymove34 {
+      0%   {top: 0px; background: #FFFF00; width: 100px;transform: translateX(-1000px);}
+      100% {top: 0px; background:#FF7812; width: 400px;}
+    }
+
+    #windline35{
+    animation-timing-function: linear;
+    animation: mymove35 3s infinite alternate;
+    height: 2px;
+    background-color: black;
+    width: 600px;
+    left:100px;
+    top:200px;
+    }
+    @keyframes mymove35 {
+      0%   {top: 0px; background: #FFFF00; width: 100px;transform: translateX(1000px);}
+      100% {top: 0px; background:#FC471E; width: 600px;}
+    }
+
+    #windline36{
+    animation-timing-function: linear;
+    animation: mymove36 3s infinite alternate;
+    height: 4px;
+    background-color: black;
+    width: 300px;
+    left:100px;
+    top:200px;
+    filter: hue-rotate(100deg);
+    }
+    @keyframes mymove36 {
+      0%   {top: 0px; background: #FFFF00; width: 100px;transform: translateX(-1000px);}
+      100% {top: 0px; background:#FF7812; width: 400px;}
+    }
+
+    #windline37{
+    animation-timing-function: linear;
+    animation: mymove37 3s infinite alternate;
+    height: 3px;
+    background-color: black;
+    width: 500px;
+    left:100px;
+    top:200px;
+    animation-delay: 1s;
+    filter: hue-rotate(120deg);
+    }
+    @keyframes mymove37 {
+      0%   {top: 0px; background: #FFFF00; width: 100px;transform: translateX(-1000px);}
+      100% {top: 0px; background:#FF7812; width: 500px;}
+    }
+
+    #windline38{
+    animation-timing-function: linear;
+    animation: mymove38 3s infinite alternate;
+    height: 2px;
+    background-color: black;
+    width: 400px;
+    left:10px;
+    top:200px;
+    }
+    @keyframes mymove38 {
+      0%   {top: 0px; background: #FFFF00; width: 100px;transform: translateX(500px);}
+      100% {top: 0px; background:#FC471E; width: 400px;}
+    }
+
+    #windline39{
+    animation-timing-function: linear;
+    animation: mymove39 3s infinite alternate;
+    height: 4px;
+    background-color: black;
+    width: 900px;
+    left:100px;
+    top:200px;
+    filter: hue-rotate(70deg);
+    }
+    @keyframes mymove39 {
+      0%   {top: 0px; background: #FFFF00; width: 500px;transform: translateX(-2000px);}
+      100% {top: 100px; background:#FF7812; width: 900px;}
+    }
+
+      #windline40{
+      animation-timing-function: linear;
+      animation: mymove40 3s infinite alternate;
+      height: 2px;
+      background-color: black;
+      width: 600px;
+      left:100px;
+      top:200px;
+      }
+    @keyframes mymove40 {
+      0%   {top: 0px; background: #FFFF00; width: 100px;transform: translateX(900px);}
+      100% {top: 0px; background:#FF7812; width: 600px;}
+    }
+
+
+  </style>
+
+<!-- <div id= "tempCircle">  </div> -->
+<!-- <div id= "TempSpeed">   </div> -->
+<!-- <div id= "tempText">    </div> -->
+<!-- <div id= "speedText">   </div> -->
+<!-- <div id= "speedText1">  </div> -->
+
+<!-- <div id= circle> </div> -->
+  <div class= windclass>
+    <div id= "windline1">   </div>
+    <div id= "windline2">   </div>
+    <div id= "windline3">   </div>
+    <div id= "windline4">   </div>
+    <div id= "windline5">   </div>
+    <div id= "windline6">   </div>
+    <div id= "windline7">   </div>
+    <div id= "windline8">   </div>
+    <div id= "windline9">   </div>
+    <div id= "windline10">  </div>
+    <div id= "windline11">  </div>
+    <div id= "windline12">  </div>
+    <div id= "windline13">  </div>
+    <div id= "windline14">  </div>
+    <div id= "windline15">  </div>
+    <div id= "windline16">  </div>
+    <div id= "windline17">  </div>
+    <div id= "windline18">  </div>
+    <div id= "windline19">  </div>
+    <div id= "windline20">  </div>
+    <div id= "windline21">  </div>
+    <div id= "windline22">  </div>
+    <div id= "windline23">  </div>
+    <div id= "windline24">  </div>
+    <div id= "windline25">  </div>
+    <div id= "windline26">  </div>
+    <div id= "windline27">  </div>
+    <div id= "windline28">  </div>
+    <div id= "windline29">  </div>
+    <div id= "windline30">  </div>
+    <div id= "windline31">  </div>
+    <div id= "windline32">  </div>
+    <div id= "windline33">  </div>
+    <div id= "windline34">  </div>
+    <div id= "windline35">  </div>
+    <div id= "windline36">  </div>
+    <div id= "windline37">  </div>
+    <div id= "windline38">  </div>
+    <div id= "windline39">  </div>
+    <div id= "windline40">  </div>
+
+  </div>
+
+
+
+
+<script type="text/javascript">
+
+    $("document").ready(function(){
+      function getData(city){
+        $.ajax({
+          url: "http://api.openweathermap.org/data/2.5/weather?q= "+ city +" &units=metric&appid=ef3e268cbe387a39c451c064de7ff0c1",
+          success: function(data) {
+          console.log(data);
+          handleData(data)
+        }
+        });
+      }
+
+
+      function handleData(data){
+        // console.log(data);
+        // console.log(data.name);
+        // console.log(data.main.temp);
+        // console.log(data.wind.speed);
+
+
+
+
+
+          let wind = data.wind.speed;
+          if (wind > 4){
+            $(".windclass").css({'filter': 'hue-rotate(' + wind*200 + 'deg)'  });
+          } else {
+            $(".windclass").css({'filter': 'hue-rotate(' + wind*20 + 'deg)'  });
+          }
+
+
+      $("#tempText").html( data.main.temp + "° C ")
+      $("#speedText").html(data.main.speed )
+      $("#tempCircle").css("width", data.main.temp)
+      $("#tempCircle").css("height",data.main.temp)
+
+      $("#speedText1").html( data.wind.speed)
+      $("#tempSpeed").css("width", data.wind.speed)
+      $("#tempSpeed").css("height",data.wind.speed)
+
+
+      $("#windline1").css("animation-duration", data.wind.speed*(.6) + "s" )
+      // console.log('here is the dealy:'+ data.wind.speed);
+
+      $("#windline2").css("animation-duration", data.wind.speed*(.9) + "s" )
+      $("#windline3").css("animation-duration", data.wind.speed*(.8) + "s" )
+      $("#windline4").css("animation-duration", data.wind.speed*(.4) + "s" )
+      $("#windline5").css("animation-duration", data.wind.speed*(.6) + "s" )
+      $("#windline6").css("animation-duration", data.wind.speed*(.8) + "s" )
+      $("#windline7").css("animation-duration", data.wind.speed*(.10) + "s" )
+      $("#windline8").css("animation-duration", data.wind.speed*(.6) + "s" )
+      $("#windline9").css("animation-duration", data.wind.speed*(.9) + "s" )
+      $("#windline10").css("animation-duration", data.wind.speed*(.4) + "s" )
+      $("#windline11").css("animation-duration", data.wind.speed*(.6) + "s" )
+      $("#windline12").css("animation-duration", data.wind.speed*(.8) + "s" )
+      $("#windline13").css("animation-duration", data.wind.speed*(.4) + "s" )
+      $("#windline14").css("animation-duration", data.wind.speed*(.6) + "s" )
+      $("#windline15").css("animation-duration", data.wind.speed*(.10) + "s" )
+      $("#windline15").css("animation-duration", data.wind.speed*(.10) + "s" )
+      $("#windline16").css("animation-duration", data.wind.speed*(.10) + "s" )
+      $("#windline17").css("animation-duration", data.wind.speed*(.4) + "s" )
+      $("#windline18").css("animation-duration", data.wind.speed*(.8) + "s" )
+      $("#windline19").css("animation-duration", data.wind.speed*(.7) + "s" )
+      $("#windline20").css("animation-duration", data.wind.speed*(.4) + "s" )
+      $("#windline21").css("animation-duration", data.wind.speed*(.10) + "s" )
+      $("#windline22").css("animation-duration", data.wind.speed*(.4) + "s" )
+      $("#windline23").css("animation-duration", data.wind.speed*(.8) + "s" )
+      $("#windline24").css("animation-duration", data.wind.speed*(.9) + "s" )
+      $("#windline25").css("animation-duration", data.wind.speed*(.6) + "s" )
+      $("#windline26").css("animation-duration", data.wind.speed*(.21) + "s" )
+      $("#windline27").css("animation-duration", data.wind.speed*(.4) + "s" )
+      $("#windline28").css("animation-duration", data.wind.speed*(.8) + "s" )
+      $("#windline29").css("animation-duration", data.wind.speed*(.6) + "s" )
+      $("#windline30").css("animation-duration", data.wind.speed*(.9) + "s" )
+      $("#windline31").css("animation-duration", data.wind.speed*(.4) + "s" )
+      $("#windline32").css("animation-duration", data.wind.speed*(.6) + "s" )
+      $("#windline33").css("animation-duration", data.wind.speed*(.9) + "s" )
+      $("#windline34").css("animation-duration", data.wind.speed*(.8) + "s" )
+      $("#windline35").css("animation-duration", data.wind.speed*(.4) + "s" )
+      $("#windline36").css("animation-duration", data.wind.speed*(.6) + "s" )
+      $("#windline37").css("animation-duration", data.wind.speed*(.9) + "s" )
+      $("#windline38").css("animation-duration", data.wind.speed*(.4) + "s" )
+      $("#windline39").css("animation-duration", data.wind.speed*(.6) + "s" )
+      $("#windline40").css("animation-duration", data.wind.speed*(.7) + "s" )
+      }
+
+      var cities =  [
+        "NEW YORK, US",
+        "MOSCOW, RU",
+        "WELLINGTON, NZ",
+        "MUMBAI, IN",
+        "AMARILLO, US",
+        "PERTH, AU",
+        "CHICAGO, US",
+        "AGANA HEIGHTS, GU",
+        "CAPE TOWN, ZA",
+        "REJKJAVIK, IS",
+        "TORSHAVEN, FO",
+        "DELHI, IN",
+        "TIRANA, AL",
+        "BRUSSELS, BE",
+        "COPENHAGEN, DK",
+        "HELSINKI, FI",
+        "ATHENS, GR",
+        "BUDAPEST, HU",
+        "ROME, IT",
+        "WARSAW, PL",
+        "BUCHAREST, RO",
+        "STOCKHOLM, SE",
+        "LONDON, GB",
+        "LJUBLJANA, SI",
+        "DUBAI, AE",
+
+
+
+
+      ]
+      // console.log(cities.length)
+      var index = Math.floor(Math.random(25)* Math.floor(cities.length))
+      console.log(index)
+
+
+
+      var city = cities[index]
+
+      getData(city)
+    $('#city').val(city)
+
+    $( "#target" ).submit(function( event ) {
+    city = $("#city").val()
+    getData(city)
+    $( "#target" ).val("In" + city)
+    event.preventDefault();
+
+    });
+})
+
+
+
+</script>
+
+</body>
+</html>

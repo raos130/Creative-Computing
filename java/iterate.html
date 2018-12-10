@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  </head>
+  <body>
+      <style media="screen">
+
+      #windspeed{
+      animation-timing-function:linear;
+      animation: mymove 3s infinite alternate;
+      height: 2px;
+      width: 700px;
+      background-color: black;
+      left: 10px;
+    }
+      @keyframes
+      mymove {
+        0%   {top: 0px; background: #FFFF00; width: 300px;transform: translateX(2000px)}
+        100% {top: 0px; background: #FF7812; width: 700px;}
+      }
+
+      </style>
+      
+<div id= "windspeed">   </div>
+
+    <script type="text/javascript">
+      var lines = 1000
+      for(var i=0; i < 1000; i++){
+        $('body').append("<div id='windspeed" + i + " '>" + i +"</div>")
+        }
+
+    </script>
+  </body>
+</html>

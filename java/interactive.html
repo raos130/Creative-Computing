@@ -4,15 +4,21 @@
     <meta charset="utf-8">
     <title></title>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  </head><body>
+  </head>
+  <body>
 
-<div id= "quoteDisplay">
 
-</div>
-<button onclick ="newQuote()"> New Quote </button>
-</body>
+  <button onclick ="newQuote()"> New Quote </button>
+  </body>
+
+<div id= "quoteDisplay"> </div>
+
 <style>
 
+#button{
+  border: none;
+  font-family: didot;
+}
 #quoteDisplay{
   font-size: 40px;
   font-family: Futura;
@@ -24,84 +30,16 @@
 
   var quotes =[
 '“Nothing burns like the cold.”<br> ― George R.R. Martin, A Game of Thrones',
-'"Winter is Coming"<br>- Game of Thrones',
+'"Winter is Coming" <br> - Game of Thrones',
 '“A sad tale\'s best for winter; I have one of sprites and goblins.”<br> ― William Shakespeare, The Winter\'s Tale',
 '“They say it grows so cold up here in winter that a man’s laughter freezes in his throat and chokes him to death,”<br>-Ned Stark, Game of Thrones',
 '“My old grandmother always used to say, Summer friends will melt away like summer snows, but winter friends are friends forever.”<br> ― George R.R. Martin, A Feast for Crows',
+' The snow is deep on the ground.<br> Always the light falls <br>Softly down on the hair of my belovèd.<br>-The Snow Is Deep on the Ground KENNETH PATCHEN'
   ]
 
 function newQuote(){
   var randomNumber= Math.floor(Math.random() * (quotes.length));
   document.getElementById('quoteDisplay').innerHTML= quotes[randomNumber];
-}
-
-    </script>
-</html>
-
-
-<!-- * #body{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  background-color: black;
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 2rem;
-  color: white;
-  overflow: hidden;
-}
-
-#quote{
-  font-family: Futura;
-  font-size: 50px;
-}
-
-#get-quote{
-border: none;
-font-family: futura;
-font-size: 20px;
-background-color: red;
-} -->
-
-    <!-- </style>
-
-  <body>
-    <button id="get-quote">Get a new quote</button>
-    <p id="quote">Getting quote...</p>
-  </body>
-
-  <script type="text/javascript">
-
-    $("document").ready(function(){
-      $.ajax({
-        url: "https://ron-swanson-quotes.herokuapp.com/v2/quotes",
-        success: function(data) {
-
-        }
-      });
-    })
-
-const quoteButton = document.body.querySelector('#get-quote');
-const quoteOutput = document.body.querySelector('#quote');
-
-function* quoteGenerator() {
-	while (true) {
-		yield fetch('http://ron-swanson-quotes.herokuapp.com/v2/quotes')
-    		.then(res => res.json());
- 	}
-}
-
-const generator = quoteGenerator();
-
-function updateQuote() {
-	quoteButton.disabled = true;
-
-	generator.next().value.then(function (data) {
-		quoteOutput.innerHTML = `"${data[0]}"`;
-		quoteButton.disabled = false;
-	});
 }
 
 quoteButton.onclick = updateQuote;
@@ -114,4 +52,7 @@ updateQuote();
 		quoteOutput.innerHTML = `"${data[0]}"`;
 		quoteButton.disabled = false;
 	});
-} */ -->
+}
+
+    </script>
+</html>
